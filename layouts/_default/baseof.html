@@ -59,16 +59,6 @@
                     </div>
                 {{ end }}
             </div>
-
-            <!-- If the blog has translation, they shoul be displayed here. -->
-            {{ if .IsTranslated }}
-            <nav>
-                {{ range $i, $lang := .Translations }}
-                {{ if $i }}/{{ end }}
-                <a href="{{ .Permalink }}">{{ $lang.Language.LanguageName }}</a>
-                {{ end}}
-            </nav>
-            {{ end }}
         </header>
 
         <!-- The content block. -->

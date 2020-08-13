@@ -1,12 +1,19 @@
-<div>
-    <h2 class="text-3xl font-bold mb-2">{{ .Key }}</h2>
-
-    <ol>
+<div class="space-y-4">
         {{ range .Pages -}}
-        <li class="mb-6 md:flex md:flex-row">
-            <time class=" block md:flex-l-24" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
-            <a class="text-lg md:ml-12" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
+            <div class="bg-white card max-auto rounded shadow-lg">
+                <div class="px-6 py-4 whitespace-normal">
+                    <a href="{{ .RelPermalink }}">
+                        <div class="font-bold text-xl mb-2">{{ .Title }}</div>
+                    </a>
+                    <p class="text-gray-700 text-base">
+                        {{ .Content }}
+                    </p>
+                </div>
+                <div class="px-6 py-4">
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+                </div>
+            </div>
         {{- end }}
-    </ol>
 </div>
