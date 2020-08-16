@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+    font-size: 18px;
     @apply text-gray-800;
 }
 
@@ -11,7 +12,7 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 article > p, ul, ol {
-    @apply text-lg tracking-wide;
+    @apply text-base;
 }
 
 article > div, p, ul, ol, pre:not(:last-child) {
@@ -19,7 +20,7 @@ article > div, p, ul, ol, pre:not(:last-child) {
 }
 
 article > ol, ul {
-    @apply list-disc ml-8;
+    @apply ml-8;
 }
 
 article > li:not(:last-of-type) {
@@ -40,12 +41,13 @@ a {
 
 /* purgecss ignore */
 pre.chroma {
-    @apply p-4 overflow-x-auto font-mono text-lg;
+    @apply p-4 overflow-x-auto break-words font-mono text-base;
+    
 }
 
 @screen md {
     /* purgecss ignore */
     div.highlight {
-        @apply -mx-6;
+        @apply -mx-6 my-4;
     }
 }
